@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">JSON Schema Generator</a>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">JSON</div>
+						<div class="panel-body">
+							<p><strong>URL</strong></p>
+							<div class="form-group">
+								<input type="text" id="txtUrl" class="form-control" value="http://example.com">
+							</div>
+							<p><strong>JSON</strong></p>
+							<div class="form-group">
+								<textarea id="sourceJSON" class="form-control" rows="10">
+		{
+			"title": "this is a test",
+			"tags": ["yes", "this", "works"]
+		}
+								</textarea>
+							</div>
+							<button class="btn btn-primary" id="btnConvert">Convert</button>
+							<p>&nbsp;</p>
+							<p><strong>Options</strong></p>
+							<div class="form-group">
+								<label>
+									<input type="checkbox" id="chkIncludeDefaults" checked="checked">
+									Include default values
+								</label>
+							</div>
+							<div class="form-group">
+								<label>
+									<input type="checkbox" id="chkForceRequired" checked="checked">
+									Force required
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="panel panel-success">
+						<div class="panel-heading">Schema</div>
+						<div class="panel-body">
+							<div class="form-group">
+								<pre id="JSONSchema" style="font-size:0.8em">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="../src/json-schema-generator.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
