@@ -8,5 +8,5 @@ Package.describe({
 
 Package.onUse(function(api) {
 	api.export(['JSONSchemaGenerator'], ['client', 'server']);
-	api.addFiles(['./src/yodata.client.js']);
+	api.addFiles(['./src/json-schema-generator.js']);
 });
