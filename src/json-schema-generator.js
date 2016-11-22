@@ -18,6 +18,7 @@
 		includeEnums: false,
 		forceRequired: true,
 		absoluteIds: true,
+		noIds: false,
 		numericVerbose: false,
 		stringsVerbose: false,
 		objectsVerbose: false,
@@ -211,7 +212,9 @@
 								if (!s.required) {
 									s.required = [];
 								}
-								s.required.push(key);
+								if(key){
+									s.required.push(key);
+								}
 							} else {
 								if (s.required) {
 									var index = s.required.indexOf(key);
@@ -462,7 +465,9 @@
 		}
 
 		this.constructId = function(src, dst) {
-			if (self.options.absoluteIds) {
+			if(self.options.noIds){
+				dst.id = undefined;
+			}else if (self.options.absoluteIds) {
 				if (src.root) {
 					dst.id = self.options.url;
 				} else {
@@ -492,7 +497,12 @@
 				}
 			}
 
-			dst.__key__ = src.key;
+			if(src.root || (src.parent && src.parent.type==='array')){
+				//don't set key for root and array items
+				dst.__key__ = undefined;
+			}else{
+				dst.__key__ = src.key;
+			}
 		}
 
 		this.setSchemaRef = function(src, dst) {
