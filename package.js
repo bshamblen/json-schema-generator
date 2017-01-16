@@ -1,8 +1,8 @@
 Package.describe({
 	name: 'bshamblen:json-schema-generator',
-	version: '0.0.1',
+	version: '0.0.2',
 	summary: 'Converts a JSON document to a JSON Schema.',
-	git: 'https://github.com/Yodata/json-schema-generator.git',
+	git: 'https://github.com/bshamblen/json-schema-generator.git',
 	documentation: 'README.md'
 });
 

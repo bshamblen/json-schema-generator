@@ -1,10 +1,10 @@
-Copyright for portions of yodata/json-schema-generator are held by [Jack Wootton](https://github.com/jsonschema), 2015 as part 
+Copyright for portions of bshamblen/json-schema-generator are held by [Jack Wootton](https://github.com/jsonschema), 2015 as part 
 of [jsonschema/json-schema-v2](https://github.com/jsonschema/json-schema-v2). 
-All other copyright for yodata/json-schema-generator are held by [Yodata, Inc.](https://yodata.io), 2015.
+All other copyright for bshamblen/json-schema-generator are held by Brian Shamblen, 2015.
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Yodata, Inc.
+Copyright (c) 2015 Brian Shamblen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
